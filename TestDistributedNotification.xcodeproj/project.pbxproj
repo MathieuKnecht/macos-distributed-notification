@@ -8,10 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		2921E10D1E4C8E7E00F1D79B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921E10C1E4C8E7E00F1D79B /* main.swift */; };
+		2921E1141E4C8EB200F1D79B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921E1131E4C8EB200F1D79B /* NotificationManager.swift */; };
+		2921E1161E4C935400F1D79B /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921E1151E4C935400F1D79B /* LogManager.swift */; };
+		2921E11E1E4C946C00F1D79B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921E11D1E4C946C00F1D79B /* main.swift */; };
+		2921E1221E4C947700F1D79B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921E1131E4C8EB200F1D79B /* NotificationManager.swift */; };
+		2921E1231E4C947700F1D79B /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921E1151E4C935400F1D79B /* LogManager.swift */; };
+		2921E1251E4C961200F1D79B /* DistributedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921E1241E4C961200F1D79B /* DistributedNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		2921E1071E4C8E7E00F1D79B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		2921E1191E4C946C00F1D79B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,10 +40,24 @@
 /* Begin PBXFileReference section */
 		2921E1091E4C8E7E00F1D79B /* TestDistributedNotification */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestDistributedNotification; sourceTree = BUILT_PRODUCTS_DIR; };
 		2921E10C1E4C8E7E00F1D79B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2921E1131E4C8EB200F1D79B /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		2921E1151E4C935400F1D79B /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		2921E11B1E4C946C00F1D79B /* TestDistributedNotifier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestDistributedNotifier; sourceTree = BUILT_PRODUCTS_DIR; };
+		2921E11D1E4C946C00F1D79B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2921E1241E4C961200F1D79B /* DistributedNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributedNotification.swift; sourceTree = "<group>"; };
+		2921E1271E4DC5EF00F1D79B /* com.domain.helper.launch.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = com.domain.helper.launch.plist; sourceTree = "<group>"; };
+		2921E1281E4DC5EF00F1D79B /* helper.launch.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = helper.launch.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2921E1061E4C8E7E00F1D79B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2921E1181E4C946C00F1D79B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +70,9 @@
 		2921E1001E4C8E7E00F1D79B = {
 			isa = PBXGroup;
 			children = (
+				2921E1261E4DBFCD00F1D79B /* LaunchDaemon */,
 				2921E10B1E4C8E7E00F1D79B /* TestDistributedNotification */,
+				2921E11C1E4C946C00F1D79B /* TestDistributedNotifier */,
 				2921E10A1E4C8E7E00F1D79B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				2921E1091E4C8E7E00F1D79B /* TestDistributedNotification */,
+				2921E11B1E4C946C00F1D79B /* TestDistributedNotifier */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +90,28 @@
 			isa = PBXGroup;
 			children = (
 				2921E10C1E4C8E7E00F1D79B /* main.swift */,
+				2921E1131E4C8EB200F1D79B /* NotificationManager.swift */,
+				2921E1151E4C935400F1D79B /* LogManager.swift */,
+				2921E1241E4C961200F1D79B /* DistributedNotification.swift */,
 			);
 			path = TestDistributedNotification;
+			sourceTree = "<group>";
+		};
+		2921E11C1E4C946C00F1D79B /* TestDistributedNotifier */ = {
+			isa = PBXGroup;
+			children = (
+				2921E11D1E4C946C00F1D79B /* main.swift */,
+			);
+			path = TestDistributedNotifier;
+			sourceTree = "<group>";
+		};
+		2921E1261E4DBFCD00F1D79B /* LaunchDaemon */ = {
+			isa = PBXGroup;
+			children = (
+				2921E1271E4DC5EF00F1D79B /* com.domain.helper.launch.plist */,
+				2921E1281E4DC5EF00F1D79B /* helper.launch.sh */,
+			);
+			name = LaunchDaemon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +134,23 @@
 			productReference = 2921E1091E4C8E7E00F1D79B /* TestDistributedNotification */;
 			productType = "com.apple.product-type.tool";
 		};
+		2921E11A1E4C946C00F1D79B /* TestDistributedNotifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2921E11F1E4C946C00F1D79B /* Build configuration list for PBXNativeTarget "TestDistributedNotifier" */;
+			buildPhases = (
+				2921E1171E4C946C00F1D79B /* Sources */,
+				2921E1181E4C946C00F1D79B /* Frameworks */,
+				2921E1191E4C946C00F1D79B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestDistributedNotifier;
+			productName = TestDistributedNotifier;
+			productReference = 2921E11B1E4C946C00F1D79B /* TestDistributedNotifier */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +162,11 @@
 				ORGANIZATIONNAME = "Mathieu Knecht";
 				TargetAttributes = {
 					2921E1081E4C8E7E00F1D79B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QQJKMH2449;
+						ProvisioningStyle = Automatic;
+					};
+					2921E11A1E4C946C00F1D79B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QQJKMH2449;
 						ProvisioningStyle = Automatic;
@@ -112,6 +186,7 @@
 			projectRoot = "";
 			targets = (
 				2921E1081E4C8E7E00F1D79B /* TestDistributedNotification */,
+				2921E11A1E4C946C00F1D79B /* TestDistributedNotifier */,
 			);
 		};
 /* End PBXProject section */
@@ -121,7 +196,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2921E1161E4C935400F1D79B /* LogManager.swift in Sources */,
+				2921E1141E4C8EB200F1D79B /* NotificationManager.swift in Sources */,
+				2921E1251E4C961200F1D79B /* DistributedNotification.swift in Sources */,
 				2921E10D1E4C8E7E00F1D79B /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2921E1171E4C946C00F1D79B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2921E1231E4C947700F1D79B /* LogManager.swift in Sources */,
+				2921E1221E4C947700F1D79B /* NotificationManager.swift in Sources */,
+				2921E11E1E4C946C00F1D79B /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +322,24 @@
 			};
 			name = Release;
 		};
+		2921E1201E4C946C00F1D79B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = QQJKMH2449;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2921E1211E4C946C00F1D79B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = QQJKMH2449;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -251,6 +357,14 @@
 			buildConfigurations = (
 				2921E1111E4C8E7E00F1D79B /* Debug */,
 				2921E1121E4C8E7E00F1D79B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2921E11F1E4C946C00F1D79B /* Build configuration list for PBXNativeTarget "TestDistributedNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2921E1201E4C946C00F1D79B /* Debug */,
+				2921E1211E4C946C00F1D79B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  TestDistributedNotification
+//  TestDistributedNotifier
 //
 //  Created by Mathieu Knecht on 09.02.17.
 //  Copyright © 2017 Mathieu Knecht. All rights reserved.
@@ -8,5 +8,4 @@
 
 import Foundation
 
-let dis = DistributedNotification()
-dis.run()
+NotificationManager.shared.postNotification(name: .Host, command: "triggerEvent", argument: "continue")

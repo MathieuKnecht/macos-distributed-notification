@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TestDistributedNotifier.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>2921E1081E4C8E7E00F1D79B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2921E11A1E4C946C00F1D79B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
