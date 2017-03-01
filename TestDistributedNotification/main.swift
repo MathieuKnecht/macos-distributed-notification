@@ -8,5 +8,5 @@
 
 import Foundation
 
-let dis = DistributedNotification()
-dis.run()
+let distributedNotification = DistributedNotification()
+distributedNotification.run()

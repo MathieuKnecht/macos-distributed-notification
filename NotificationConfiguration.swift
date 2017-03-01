@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+extension Notification.Name {
+    static let Helper = Notification.Name("com.mknecht.helper.distnotif")
+}

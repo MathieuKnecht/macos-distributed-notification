@@ -11,29 +11,33 @@ import Foundation
 class LogManager {
     
     static let shared = LogManager()
-    private let logPath = "/var/log/"
-    private var filename = ""
-    
-    func log(line: String, filename: String) {
-        if filename == "" { return }
-        self.filename = filename
-        print(line)
-        self.writeLineToEndFile(line: line)
+    public var filePath: String?
+    private var filepath : String! {
+        get{
+            guard let tt = self.filePath
+                else{
+                    print("log file not initialized, default file /var/log/defaultFile.log will be used")
+                    return "/var/log/defaultFile.log"
+            }
+            return tt
+        }
     }
     
-    private func writeLineToEndFile(line: String) {
+    func log(line: String) {
         
         let filemgr = FileManager.default
         
-        if !filemgr.fileExists(atPath: logPath+filename) {
-            filemgr.createFile(atPath: logPath+filename, contents: nil, attributes: nil)
+        if !filemgr.fileExists(atPath: filepath) {
+            filemgr.createFile(atPath: filepath, contents: nil, attributes: nil)
         }
         
-        self.writeLine(line: line)
+        print(line)
+        self.writeLine(line: line+"\n")
     }
     
     private func writeLine (line: String) {
-        if let filehandle = FileHandle(forWritingAtPath: logPath+filename) {
+        
+        if let filehandle = FileHandle(forWritingAtPath: filepath) {
             let data = line.data(using: String.Encoding.utf8, allowLossyConversion: false)!
             filehandle.seekToEndOfFile()
             filehandle.write(data)
@@ -42,7 +46,7 @@ class LogManager {
     }
     
     func resetFile () {
-        FileManager.default.createFile(atPath: logPath+filename, contents: nil, attributes: nil)
+        FileManager.default.createFile(atPath: filepath, contents: nil, attributes: nil)
     }
     
 }

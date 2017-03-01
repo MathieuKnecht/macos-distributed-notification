@@ -43,4 +43,5 @@ Outputs are also logged in ```/var/log/DNHelper.log```
 2. You can verify that the Helper application is running with Activity Monitor by selecting View/All Processes
 3. Verify that your log file has been reset by typing ```cat /var/log/DNHelper.log ```. It should be empty.
 4. Open a Terminal and launch the Notifier with : ```/Library/Application\ Support/DistributedNotification/DistNotifNotifier ```
-5. Display the log file with ```cat /var/log/DNHelper.log ```. It should be empty and prove that there are different behaviours from distributed notifications. I would like to understand why...
+5. Display the log file with ```cat /var/log/DNHelper.log ```. It should only display ```
+Helper: started ...``` and prove that there are different behaviours from distributed notifications. I would like to understand why...

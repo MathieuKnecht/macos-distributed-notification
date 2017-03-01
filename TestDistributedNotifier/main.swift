@@ -8,4 +8,4 @@
 
 import Foundation
 
-NotificationManager.shared.postNotification(name: .Host, command: "triggerEvent", argument: "continue")
+NotificationManager.shared.postNotification(name: .Helper, command: "testCommand", argument: "testArgument")

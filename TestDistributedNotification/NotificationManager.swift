@@ -8,10 +8,6 @@
 
 import Foundation
 
-extension Notification.Name {
-    static let Host = Notification.Name("Host")
-}
-
 class NotificationManager {
     
     static let shared = NotificationManager()
@@ -19,7 +15,7 @@ class NotificationManager {
     func registerForNotification (name: NSNotification.Name, completion: @escaping (_ command: String, _ argument:String)->()){
         
         DistributedNotificationCenter.default().addObserver(forName: name, object: nil, queue: nil) { (notif) in
-            LogManager.shared.log(line: "Received command", filename: "host.log")
+            LogManager.shared.log(line: "Helper: receive command")
             guard let info = notif.userInfo,
                 let command = info["command"] as? String,
                 let argument = info["argument"] as? String
