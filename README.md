@@ -1,10 +1,10 @@
 # Issue with distributed notifications
 
-Trying to develop a MacOS helper, a command line app executed in root mode, I encounter a strange behaviour from distributed behaviour.
+Trying to develop a MacOS helper, a command line app executed in root mode, I encounter a strange behaviour from distributed notifications.
 
 I try to send distributed notifications with **DistributedNotificationCenter** to the helper from another app running in user mode.
 
-If the app is launched by XCode or shell command line, the helper receives notifications from the other app.
+If the app is launched by XCode or shell command line in root mode, the helper receives notifications from the other app.
 If the app is launched by a launch daemon, the helper does not receive notifications.
 
 
